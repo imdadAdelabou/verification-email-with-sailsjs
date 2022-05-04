@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        section {
+            display: flex;
+            justify-content: center;
+            margin-top: 70px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        input {
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #275EFE;
+            padding-left: 10px;
+        }
+        
+        form>input {
+            width: 420px;
+        }
+        
+        .firstRange input,
+        .thirdRange input {
+            width: 200px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 500;
+        }
+        
+        .firstRange,
+        .thirdRange {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .spacer {
+            margin: 20px;
+        }
+        
+        button {
+            width: 420px;
+            height: 50px;
+            background-color: #27AE60;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <form method="post" action="/api/inscription">
+            <h1>Inscription</h1>
+            <div class="firstRange">
+                <div>
+                    <div>
+                        <label>Firstname</label>
+                    </div>
+                    <input placeholder="firstname" name="firstname" />
+                </div>
+                <div>
+                    <div>
+                        <label>Lastname</label>
+                    </div>
+                    <input placeholder="lastname" name="lastname" />
+                </div>
+            </div>
+            <div class="spacer">
+            </div>
+            <label>E-mail</label>
+            <input placeholder="E-mail" type="email" name="email" />
+            <div class="spacer">
+            </div>
+            <div class="thirdRange">
+                <div>
+                    <label>Contact Whatsapp</label>
+                    <input type="number" name="whatsappTel" />
+                </div>
+                <div>
+                    <label>Num Tel</label>
+                    <input type="number" name="numTel" />
+                </div>
+            </div>
+            <div class="spacer">
+            </div>
+            <label>Mots de passe</label>
+            <input type="password" name="password" />
+            <div class="spacer">
+            </div>
+            <button type="submit"> s'inscrire</button>
+        </form>
+    </section>
+</body>
+
+</html>
